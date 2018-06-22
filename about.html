@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+     <title>MANISH KUMAR RAI</title>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link href="aboutstyle.css" rel="stylesheet">
+     <script>
+     var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+     </script>
+   </head>
+
+   <body>
+
+     <nav class = "navbar navbar-inverse navbar-fixed-top" id = "top">
+       <div class="container-fluid">
+         <div class = "navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" style="font-family: serif; font-size: 30px;color:#26A69A" href="index.html">Manish  Kumar  Rai </a>
+        </div>
+    <!--items-->
+      <div class="collapse navbar-collapse" id="topNavBar">
+          <ul class="nav navbar-nav navbar-right">
+             <li class="">
+               <a href="about.html" id="si" style="font-family: serif; font-size: 30px; color:#26A69A">
+                 <span aria-hidden="true"></span> About
+               </a>
+             </li>
+             <li class="">
+               <a href="work.html" id="si" style="font-family: serif; font-size: 30px;color:#26A69A">
+                 <span  aria-hidden="true"></span> Work
+               </a>
+             </li>
+             <li class="">
+               <a href="contact.html" id="si" style="font-family: serif; font-size: 30px;color:#26A69A">
+                 <span  aria-hidden="true"></span> Contact
+               </a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+
+
+    <div class="row">
+      <div class="col-lg-6 col-md-4 col-sm-4"><img id="i" src="mypic.jpg" alt="Manish Image" class="img-responsive profile-img"></div>
+      <div class="col-12 col-md-6" id="rt">
+
+        <a href="" class="typewrite" style="font-size:30;font-family:serif;font-style:italic;color:#26A69A" data-period="2000" data-type='[ "Hello I m Manish, from India.", " Currently i am student at Graphic Era University and pursuing Bachelor of Technology in Computer Science with Specialisation in Big Data Analytics.", "I design and code beautifully simple things, and I love what I do." ]'>
+          <span class="wrap"></span>
+        </a>
+
+
+        <!--p>Hello I'm Manish, from India. Currently i am student at <a id="geu"  href="http://www.geu.ac.in/">Graphic Era University</a> and pursuing Bachelor of Technology in Computer Science with Specialisation in Big Data Analytics.
+      I design and code beautifully simple things, and I love what I do.</P-->
+     </div>
+   </div>
+   <div class="row">
+    <div class="col-lg-12 col-md-4 col-sm-4">
+    <h3 id="HI" align="center" style="color:#26A69A;"> My Hobbies &amp; Interest </h3>
+    <ul id="IH">
+      <li id="IH"> Android App Development </li>
+      <li id="IH"> Machine learning enthusiastic </li>
+      <li id="IH">  Full Stack Developement </li>
+      <li id="IH"> Comptetive Programming </li>
+      <li id="IH">  Playing Cricket </li>
+      <li id="IH"> Playing Table tennis </li>
+    </ul>
+    </div>
+    </div>
+</div>
+         <script
+         src="https://code.jquery.com/jquery-3.3.1.min.js"
+         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+         crossorigin="anonymous"></script>
+        <!--Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   </body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+     <title>MANISH KUMAR RAI</title>
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link href="style.css" rel="stylesheet">
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
+             <script type="text/javascript" src="paper-full.js"></script>
+             <script type="text/paperscript" canvas="myCanvas">
+
+             var circles = [];
+
+             var data = {
+             	q: {
+             		sound: new Howl({
+               		src: ['sounds/bubbles.mp3']
+             		}),
+             		color: '#1abc9c'
+             	},
+             	w: {
+             		sound: new Howl({
+               		src: ['sounds/clay.mp3']
+             		}),
+             		color: '#2ecc71'
+             	},
+             	e: {
+             		sound: new Howl({
+               		src: ['sounds/confetti.mp3']
+             		}),
+             		color: '#3498db'
+             	},
+             	r: {
+             		sound: new Howl({
+               		src: ['sounds/corona.mp3']
+             		}),
+             		color: '#9b59b6'
+             	},
+             		t: {
+             		sound: new Howl({
+               		src: ['sounds/dotted-spiral.mp3']
+             		}),
+             		color: '#34495e'
+             	},
+             	y: {
+             		sound: new Howl({
+               		src: ['sounds/flash-1.mp3']
+             		}),
+             		color: '#16a085'
+             	},
+             	u: {
+             		sound: new Howl({
+               		src: ['sounds/flash-2.mp3']
+             		}),
+             		color: '#27ae60'
+             	},
+             	i: {
+             		sound: new Howl({
+               		src: ['sounds/flash-3.mp3']
+             		}),
+             		color: '#2980b9'
+             	},
+             	o: {
+             		sound: new Howl({
+             			src: ['sounds/glimmer.mp3']
+             		}),
+             		color: '#8e44ad'
+             	},
+             	p: {
+             		sound: new Howl({
+               		src: ['sounds/moon.mp3']
+             		}),
+             		color: '#2c3e50'
+             	},
+             	a: {
+             		sound: new Howl({
+               		src: ['sounds/pinwheel.mp3']
+             		}),
+             		color: '#f1c40f'
+             	},
+             	s: {
+             		sound: new Howl({
+               		src: ['sounds/piston-1.mp3']
+             		}),
+             		color: '#e67e22'
+             	},
+             		d: {
+             		sound: new Howl({
+               		src: ['sounds/piston-2.mp3']
+             		}),
+             		color: '#e74c3c'
+             	},
+             	f: {
+             		sound: new Howl({
+               		src: ['sounds/prism-1.mp3']
+             		}),
+             		color: '#95a5a6'
+             	},
+             	g: {
+             		sound: new Howl({
+               		src: ['sounds/prism-2.mp3']
+             		}),
+             		color: '#f39c12'
+             	},
+             	h: {
+             		sound: new Howl({
+               		src: ['sounds/prism-3.mp3']
+             		}),
+             		color: '#d35400'
+             	},
+             	j: {
+             		sound: new Howl({
+               		src: ['sounds/splits.mp3']
+             		}),
+             		color: '#1abc9c'
+             	},
+             	k: {
+             		sound: new Howl({
+               		src: ['sounds/squiggle.mp3']
+             		}),
+             		color: '#2ecc71'
+             	},
+             	l: {
+             		sound: new Howl({
+               		src: ['sounds/strike.mp3']
+             		}),
+             		color: '#3498db'
+             	},
+             	z: {
+             		sound: new Howl({
+               		src: ['sounds/suspension.mp3']
+             		}),
+             		color: '#9b59b6'
+             	},
+             	x: {
+             		sound: new Howl({
+               		src: ['sounds/timer.mp3']
+             		}),
+             		color: '#34495e'
+             	},
+             	c: {
+             		sound: new Howl({
+               		src: ['sounds/ufo.mp3']
+             		}),
+             		color: '#16a085'
+             	},
+             	v: {
+             		sound: new Howl({
+               		src: ['sounds/veil.mp3']
+             		}),
+             		color: '#27ae60'
+             	},
+             	b: {
+             		sound: new Howl({
+               		src: ['sounds/wipe.mp3']
+             		}),
+             		color: '#2980b9'
+             	},
+             	n: {
+             		sound: new Howl({
+             			src: ['sounds/zig-zag.mp3']
+             		}),
+             		color: '#8e44ad'
+             	},
+             	m: {
+             		sound: new Howl({
+               		src: ['sounds/moon.mp3']
+             		}),
+             		color: '#2c3e50'
+             	}
+             }
+
+             function onKeyDown(event) {
+     	           // When a key is pressed, set the content of the text item:
+                    var maxPoint = new Point(view.size.width,view.size.height);
+                    var point = maxPoint*Point.random();
+                    var circle = new Path.Circle(point,300);
+                    data[event.key].sound.play();
+                    circle.fillColor = data[event.key].color;
+                    circles.push(circle);
+             }
+
+             function onFrame(event){
+                 // circles.foreach(new function(){
+                 //     //this.fillColor.hue+=1;
+                 //     this.scale(0.9);
+                 // });
+                 for(var i = 0 ; i < circles.length ; i++){
+                     circles[i].fillColor.hue+=1;
+                     circles[i].scale(0.9);
+                     if(circles[i].area < 1){
+                         circles[i].remove();
+                         circles.splice(i, 1);
+                         console.log(circles);
+                     }
+                 }
+             }
+
+             </script>
+   </head>
+   <body>
+      <!--NAV BAR-->
+
+      <div class="responsive">
+     <nav class = "navbar navbar-inverse navbar-fixed-top" id = "top">
+       <div class="container-fluid">
+         <div class = "navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" style="font-family: serif; font-size: 30px;color:#26A69A;" href="index.html">Manish  Kumar  Rai </a>
+        </div>
+    <!--items-->
+      <div class="collapse navbar-collapse" id="topNavBar">
+          <ul class="nav navbar-nav navbar-right">
+             <li class="">
+               <a href="about.html" id="si" style="font-family: serif; font-size: 30px;color:#26A69A;">
+                 <span aria-hidden="true"></span> About
+               </a>
+             </li>
+             <li class="">
+               <a href="work.html" id="si" style="font-family: serif; font-size: 30px;color:#26A69A;">
+                 <span  aria-hidden="true"></span> Work
+               </a>
+             </li>
+             <li class="">
+               <a href="contact.html" id="si" style="font-family: serif; font-size: 30px;color:#26A69A;">
+                 <span  aria-hidden="true"></span> Contact
+               </a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+</div>
+       <div id="npos" class="responsive">
+			        <h2 id="helo"> Hello, my name is </h2>
+		          <h1 id="name">Manish  Rai</h1>
+              <h3 style="color:#26A69A;">Press any Alphabet to see the work</h3>
+	      </div>
+<canvas id="myCanvas">
+          </canvas>
+     <script
+     src="https://code.jquery.com/jquery-3.3.1.min.js"
+     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+     crossorigin="anonymous"></script>
+   <!--Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   </body>

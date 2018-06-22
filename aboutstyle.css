@@ -1,0 +1,55 @@
+ html{
+  background: black;
+}
+body{
+  margin-top: 40px;
+  background: #000000;
+  border-radius: 3%;
+  border: 23px solid #26A69A;;
+  padding:30px;
+}
+#aboutme{
+
+color:#26A69A;
+}
+#rt{
+  margin-top: 100px;
+  font-size: 30px;
+  font-family: serif;
+  font-style: italic;
+  font-kerning: auto;
+  color:#26A69A
+}
+.profile-img{
+
+  border-radius: 50%;
+max-width: 400px;
+margin: 0px auto;
+border: 6px solid #FF1744;
+margin-bottom: 30px;
+margin-top: 50px;
+}
+#HI{
+  padding: 0px;
+  text-align: center;
+  font-size: 45px;
+  font-family:serif;
+  font-style: italic;
+  color:#26A69A
+  margin-bottom: 20px;
+}
+#IH{
+    margin-top: 15px;
+    padding: 11px;
+     margin-bottom: 10px;
+     display: inline;
+     font-size: 21px;
+     font-family:serif;
+     font-style: italic;
+     color:#26A69A
+}
+#geu{
+  color: #E91E63;
+  font-style: italic;
+  font-family: sans-serif;
+}
