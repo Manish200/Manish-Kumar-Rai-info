@@ -5,7 +5,7 @@ body{
   margin-top: 40px;
   background: #000000;
   border-radius: 3%;
-  border: 23px solid #26A69A;;
+
   padding:30px;
 }
 #aboutme{
@@ -23,7 +23,7 @@ color:#26A69A;
 .profile-img{
 
   border-radius: 50%;
-max-width: 400px;
+max-width: 350px;
 margin: 0px auto;
 border: 6px solid #FF1744;
 margin-bottom: 30px;
