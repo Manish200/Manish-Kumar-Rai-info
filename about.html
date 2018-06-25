@@ -30,7 +30,7 @@
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
         var that = this;
-        var delta = 200 - Math.random() * 100;
+        var delta = 100 - Math.random() * 100;
 
         if (this.isDeleting) { delta /= 2; }
 
@@ -40,7 +40,7 @@
         } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 300;
         }
 
         setTimeout(function() {
@@ -103,10 +103,10 @@
 
 
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12"><img id="i" src="mypic.jpg" alt="Manish Image" class="img-responsive profile-img"></div>
+      <div class="col-lg-12 col-md-12 col-sm-12"><img id="i" src="mypic.jpg" alt="Manish Image" class="img-responsive profile-img"></div>
       <div class="col-12 col-md-12 col-sm-12" id="rt">
 
-        <a href="" class="typewrite" style="font-size:30;font-family:serif;font-style:italic;color:#26A69A" data-period="2000" data-type='[ "Hello I m Manish, from India.", " Currently i am student at Graphic Era University and pursuing Bachelor of Technology in Computer Science with Specialisation in Big Data Analytics.", "I design and code beautifully simple things, and I love what I do." ]'>
+        <a href="" class="typewrite" style="font-size:40;font-family:serif;font-style:italic;color:#26A69A;margin:80px;" data-period="2000" data-type='[ "Hello I m Manish, from India. Currently i am student at Graphic Era University and pursuing Bachelor of Technology in Computer Science with Specialisation in Big Data Analytics. I design and code beautifully simple things, and I love what I do." ]'>
           <span class="wrap"></span>
         </a>
 
