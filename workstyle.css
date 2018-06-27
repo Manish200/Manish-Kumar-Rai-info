@@ -7,7 +7,7 @@ body{
 
 
 #heading{
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
   font-size: 60px;
   font-style: italic;
@@ -31,7 +31,7 @@ body{
 .box{
   text-align:center;
     position:relative;
-    top:80px;
+    top:5px;
 }
 .box {
     width:80%;
