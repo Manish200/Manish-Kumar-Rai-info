@@ -199,15 +199,6 @@
    <body>
 
 
-     <div class = "preload" id = "preload">
-       <div class ="logo">
-         <span style = "color: darkturquoise;"></span>
-       </div>
-        <div class = "loader-frame">
-         <div class = "loader1" id = "loader1"></div>
-         <div class = "loader2" id = "loader2"></div>
-        </div>
-      </div>
 
 
 
@@ -252,10 +243,10 @@
 
 
             <ul>
-                <li><a href="index.php" style="font-size:35px;font-family:serif;font-style:italic;">Home</a></li>
-                <li><a href="about.php" style="font-size:35px;font-family:serif;font-style:italic;">About</a></li>
-                <li><a href="work.php" style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
-                <li><a href="contact.php" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
+                <li><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;">Home</a></li>
+                <li><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;">About</a></li>
+                <li><a href="work.html" style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
+                <li><a href="contact.html" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
             </ul>
 
         </nav>
@@ -290,32 +281,6 @@
 
 
        })();
-
-
-
-       (function(){
-
-        var preload = document.getElementById("preload");
-        var loading = 0;
-        var id = setInterval(frame, 64);
-
-        function frame(){
-         if(loading == 100) {
-          clearInterval(id);
-          index.open("index.html", "_self");
-         }
-         else {
-          loading = loading + 1;
-          if(loading == 90) {
-           preload.style.animation = "fadeout 1s ease";
-          }
-         }
-        }
-
-
-       })();
-
-
 
    </script>
    </body>
