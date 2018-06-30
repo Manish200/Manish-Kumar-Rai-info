@@ -7,6 +7,9 @@
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <link href="style.css" rel="stylesheet">
+
+
+
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
              <script type="text/javascript" src="paper-full.js"></script>
              <script type="text/paperscript" canvas="myCanvas">
@@ -198,9 +201,10 @@
    </head>
    <body>
 
-
-
-
+     <div id="overlay">
+       <div><p style="font-size:60px;color:#FFF">Manish Info Loading....</p></div>
+     <div class="spinner"></div>
+     </div>
 
       <!--div class="responsive">
      <nav class = "navbar navbar-inverse navbar-fixed-top" id = "top">
@@ -246,7 +250,7 @@
                 <li><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;">Home</a></li>
                 <li><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;">About</a></li>
                 <li><a href="work.html" style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
-                <li><a href="contact.html" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
+                <li><a href="contact.php" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
             </ul>
 
         </nav>
@@ -260,6 +264,8 @@
     <div>
 <canvas id="myCanvas">
           </canvas>
+
+
      <script
      src="https://code.jquery.com/jquery-3.3.1.min.js"
      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -282,5 +288,11 @@
 
        })();
 
+
    </script>
+   <script>var overlay = document.getElementById("overlay");
+
+   window.addEventListener('load', function(){
+     overlay.style.display = 'none';
+   })</script>
    </body>
