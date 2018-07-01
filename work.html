@@ -6,10 +6,17 @@
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <link href="workstyle.css" rel="stylesheet">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
 
    <body>
 
+
+     <div id="overlay">
+       <div><p align="center" style="margin-top: 430px;font-size:60px;color:darkturquoise;">Manish Work Loading....</p></div>
+     <div class="spinner"></div>
+     </div>
      <!--nav class = "navbar navbar-inverse navbar-fixed-top" id = "top">
        <div class="container-fluid">
          <div class = "navbar-header">
@@ -47,13 +54,12 @@
 
    <nav>
 
-       <a href="#" class="nav-toggle-btn"></a>
-
+<a href="#" class="nav-toggle-btn fa fa-bars" style="font-size:55px;color:#FFFFFF;"></a>
        <ul>
-           <li><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;">Home</a></li>
-           <li><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;">About</a></li>
-           <li><a href="work.html" style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
-           <li><a href="contact.html" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
+           <li  class="glyphicon glyphicon-home" style="font-size:35px; color:#FFF; margin:15px;"><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;"> Home</a></li>
+           <li  class="glyphicon glyphicon-user" style="font-size:35px; color:#FFF;margin:15px;"><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;"> About</a></li>
+           <li  class="glyphicon glyphicon-education" style="font-size:35px; color:#FFF;margin:15px;"><a href="work.html"  style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
+           <li  class="glyphicon glyphicon-earphone" style="font-size:35px; color:#FFF;margin:15px;"><a href="contact.html"  style="font-size:35px;font-family:serif;font-style:italic;"> Contact</a></li>
        </ul>
 
    </nav>
@@ -82,11 +88,11 @@
 <h3 align="center" id="project-head"> Classification of 200 Species of Bird using tensorflow </h3>
 </div>
 <div>
-  <p align="center" id="para">This project aims to identify the species of a bird from an given image dataset from <a style="font-family:serif;font-size:34px;color:#303F9F;"  href="https://www.kaggle.com/artimous/complete-fifa-2017-player-dataset-global">kaggle</a>  </p>
+  <p align="center" id="para">This project aims to identify the species of a bird from an given image dataset from <a style="font-family:serif;font-size:34px;color:#303F9F;" href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" >kaggle</a>  </p>
 </div>
 <div>
   <button type="button" class="btn btn-dark git" style="margin-bottom:5px; background:#F50057; ">
-  																<a target="_blank" style="color:#FFF;font-size:20px;font-style:bold;" href="https://github.com/Manish200/SNAKE_GAME">See project</a></button>
+  																<a target="_blank" style="color:#FFF;font-size:20px;font-style:bold;" href="https://github.com/Manish200/Classification-of-200-Species-of-Bird-using-tensorflow">See project</a></button>
 </div>
 </div>
 
@@ -97,7 +103,7 @@
 <h3 align="center" id="project-head">Data Analysis on Kaggle Dataset</h3>
 </div>
 <div>
-  <p align="center" id="para">In this project I had performed data analysis &amp; data visualisation on Dataset of fifa 2017 players taken from <a style="font-family:serif;font-size:34px;color:#303F9F;" href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html">kaggle</a>. To see the project Click below</p>
+  <p align="center" id="para">In this project I had performed data analysis &amp; data visualisation on Dataset of fifa 2017 players taken from <a style="font-family:serif;font-size:34px;color:#303F9F;" href="https://www.kaggle.com/artimous/complete-fifa-2017-player-dataset-global"  >kaggle</a>. To see the project Click below</p>
 </div>
 <div>
   <button type="button" class="btn btn-dark git" style="margin-bottom:5px; background:#F50057; ">
@@ -105,6 +111,20 @@
 </div>
 </div>
 
+
+
+<div class="box effect1">
+  <div>
+<h3 align="center" id="project-head">GeeksForGeeks</h3>
+</div>
+<div>
+  <p align="center" id="para">I had also work at <a target="_blank" style="font-family:serif;font-size:34px;color:#303F9F;" href="https://www.geeksforgeeks.org/">GeeksForGeeks</a> as a technical content writer. For more inforation click on the link below.</p>
+</div>
+<div>
+  <button type="button" class="btn btn-dark git" style="margin-bottom:5px; background:#F50057; ">
+  																<a target="_blank" style="color:#FFF; font-size:20px;font-style:bold;" href="https://www.geeksforgeeks.org/wp-content/uploads/manish-kumar-rai-2.jpg">See project</a></button>
+</div>
+</div>
 
 
 <div class="box effect1">
@@ -148,6 +168,12 @@
 
             })();
             </script>
+          </script>
+          <script>var overlay = document.getElementById("overlay");
+
+          window.addEventListener('load', function(){
+            overlay.style.display = 'none';
+          })</script>
 </body>
 
 </html>

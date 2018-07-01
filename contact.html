@@ -7,6 +7,8 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link href="contact.css" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
      <script>
       var myCenter = new google.maps.LatLng(26.877493,  80.947777);
@@ -30,6 +32,13 @@
    </head>
 
    <body>
+
+
+          <div id="overlay">
+            <div><p align="center" style="margin-top: 430px;font-size:60px;color:darkturquoise;">Contact Manish....</p></div>
+          <div class="spinner"></div>
+          </div>
+
      <!--nav class = "navbar navbar-inverse navbar-fixed-top" id = "top">
        <div class="container-fluid">
          <div class = "navbar-header">
@@ -63,13 +72,13 @@
      </nav-->
 
      <nav>
-         <a href="#" class="nav-toggle-btn"></a>
 
+<a href="#" class="nav-toggle-btn fa fa-bars" style="font-size:55px;color:#FFFFFF;"></a>
          <ul>
-             <li><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;">Home</a></li>
-             <li><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;">About</a></li>
-             <li><a href="work.html" style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
-             <li><a href="contact.html" style="font-size:35px;font-family:serif;font-style:italic;">Contact</a></li>
+             <li  class="glyphicon glyphicon-home" style="font-size:35px; color:#FFF; margin:15px;"><a href="index.html" style="font-size:35px;font-family:serif;font-style:italic;"> Home</a></li>
+             <li  class="glyphicon glyphicon-user" style="font-size:35px; color:#FFF;margin:15px;"><a href="about.html" style="font-size:35px;font-family:serif;font-style:italic;"> About</a></li>
+             <li  class="glyphicon glyphicon-education" style="font-size:35px; color:#FFF;margin:15px;"><a href="work.html"  style="font-size:35px;font-family:serif;font-style:italic;">Work</a></li>
+             <li  class="glyphicon glyphicon-earphone" style="font-size:35px; color:#FFF;margin:15px;"><a href="contact.html"  style="font-size:35px;font-family:serif;font-style:italic;"> Contact</a></li>
          </ul>
 
      </nav>
@@ -123,11 +132,11 @@
 
                                     <div align="center">
 
-                                      <a href="https://github.com/Manish200" class="fa fa-github"></a>
-                                      <a href="https://www.facebook.com/mk.rai.71" class="fa fa-facebook"></a>
-                                      <a href="https://plus.google.com/u/0/114219882814659032434" class="fa fa-google"></a>
-                                      <a href="https://www.linkedin.com/notifications/" class="fa fa-linkedin"></a>
-                                      <a href="https://www.instagram.com/i_am_manishrai_/" class="fa fa-instagram"></a>
+                                      <a href="https://github.com/Manish200" style="font-size:50px;" class="fa fa-github"></a>
+                                      <a href="https://www.facebook.com/mk.rai.71" style="font-size:50px;" class="fa fa-facebook"></a>
+                                      <a href="https://plus.google.com/u/0/114219882814659032434" style="font-size:50px;" class="fa fa-google"></a>
+                                      <a href="https://www.linkedin.com/notifications/" style="font-size:50px;" class="fa fa-linkedin"></a>
+                                      <a href="https://www.instagram.com/i_am_manishrai_/" style="font-size:50px;" class="fa fa-instagram"></a>
 
                                     </div>
                                 </div>
@@ -168,6 +177,13 @@
 
             })();
             </script>
+
+          </script>
+          <script>var overlay = document.getElementById("overlay");
+
+          window.addEventListener('load', function(){
+            overlay.style.display = 'none';
+          })</script>
 
 </body>
 
