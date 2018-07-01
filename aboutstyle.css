@@ -1,13 +1,9 @@
- html{
-  background-image: url("background-image.jpg");
-}
 body{
-  margin-top: 40px;
+  padding: auto;
+  margin-top:20px; 
   background-image: url("background-image.jpg");
-  border-radius: 3%;
 }
 #aboutme{
-
 color:#26A69A;
 }
 #rt{
@@ -19,11 +15,10 @@ color:#26A69A;
   color:#26A69A
 }
 .profile-img{
-  border-radius: 60%;
-max-width: 450px;
-margin: 0px auto;
+  border-radius: 50%;
+max-width: auto;
+margin: auto auto;
 border: 6px solid #2962FF;;
-margin-bottom: 0px;
 }
 #HI{
   padding: 0px;
