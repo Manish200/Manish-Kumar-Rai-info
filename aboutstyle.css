@@ -1,9 +1,9 @@
  html{
-  background-image: url("https://cdn.pixabay.com/photo/2017/11/22/22/52/milky-way-2971669_960_720.jpg");
+  background-image: url("background-image.jpg");
 }
 body{
   margin-top: 40px;
-  background-image: url("https://cdn.pixabay.com/photo/2017/11/22/22/52/milky-way-2971669_960_720.jpg");
+  background-image: url("background-image.jpg");
   border-radius: 3%;
 }
 #aboutme{
