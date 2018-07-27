@@ -1,10 +1,10 @@
 body{
   padding: auto;
-  margin-top:20px; 
-  background-image: url("background-image.jpg");
+  margin-top:20px;
+  background:#000;
 }
 #aboutme{
-color:#26A69A;
+color:#18FFFF;
 }
 #rt{
   margin-top: 10px;
@@ -12,7 +12,7 @@ color:#26A69A;
   font-family: serif;
   font-style: italic;
   font-kerning: none;
-  color:#26A69A
+  color:#18FFFF;
 }
 .profile-img{
   border-radius: 50%;
@@ -73,7 +73,7 @@ border: 6px solid #2962FF;;
                 z-index: 1000;
                 top: 0;
                 bottom: 0;
-                width: 200px;
+                width: 150px;
                 background-color: #AD1457;
                 transform: translate3d(-200px, 0, 0);
                 transition: transform 0.4s ease;
