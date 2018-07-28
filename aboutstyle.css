@@ -30,10 +30,10 @@ border: 6px solid #2962FF;;
 }
 #IH{
     margin-top: 25px;
-    padding: 15px;
+    padding: 30px;
      margin-bottom: 100px;
      display: inline;
-     font-size: 22px;
+     font-size: 20px;
      font-family:serif;
      font-style: italic;
      color:#D50000;
@@ -74,7 +74,7 @@ border: 6px solid #2962FF;;
                 top: 0;
                 bottom: 0;
                 width: 150px;
-                background-color: #AD1457;
+                background-color:#1565C0;
                 transform: translate3d(-200px, 0, 0);
                 transition: transform 0.4s ease;
             }
@@ -100,7 +100,7 @@ border: 6px solid #2962FF;;
                 width: 53px;
                 height: 53px;
                 margin: 10px;
-                background-color: #FF1744;
+                background-color: #304FFE;
             }
 
             .content {
@@ -148,3 +148,7 @@ border: 6px solid #2962FF;;
               left:0;
               top:0;
              }
+             footer{ background-color:#4DD0E1;
+               margin-bottom: 10px;
+               align:center;
+      }

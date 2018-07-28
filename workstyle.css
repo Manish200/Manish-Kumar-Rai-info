@@ -1,7 +1,7 @@
 body{
 
 
-  background:#004D40;
+  background:#4DD0E1;
 }
 
 nav {
@@ -9,8 +9,9 @@ nav {
     z-index: 1000;
     top: 0;
     bottom: 0;
-    width: 150px;
-    background-color: #AD1457;
+    width: 140px;
+    background-color:
+#1565C0;
     transform: translate3d(-200px, 0, 0);
     transition: transform 0.4s ease;
 }
@@ -35,8 +36,8 @@ nav ul li a {
     left: 200px;
     width: 53px;
     height: 53px;
-    margin: 10px;
-    background-color: #FF1744;
+    margin: 5px;
+    background-color: #304FFE;
 }
 
 .content {
@@ -44,7 +45,7 @@ nav ul li a {
     height: 2000px;
     background-color: #ccf;
     text-align: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
 }
 .active-nav .content {
     transform: translate3d(200px, 0, 0);
@@ -78,9 +79,9 @@ nav ul li a {
     top:5px;
 }
 .box {
-    width:80%;
+    width:90%;
     height:auto;
-    background:#78909C;
+    background:#D1C4E9;
     margin:80px auto;
 }
 
